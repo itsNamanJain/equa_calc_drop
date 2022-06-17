@@ -1,0 +1,86 @@
+export default [
+  {
+    id:1,
+    type: "operand",
+    isdragabble: true,
+    name: "A",
+    value: 1,
+  },
+  {
+    id:2,
+    type:"operand",
+    isdragabble:true,
+    name:"B",
+    value:2
+},
+{
+    id:3,
+    type:"operand",
+    isdragabble:true,
+    name:"C",
+    value:3
+},
+{
+    id:4,
+    type:"operand",
+    isdragabble:true,
+    name:"D",
+    value:4
+},
+{
+    id:5,
+    type:"operand",
+    isdragabble:true,
+    name:"E",
+    value:5
+},
+{
+    id:6,
+    type:"operator",
+    isdragabble:true,
+    name:"+",
+    value:"+"
+},
+{
+    id:7,
+    type:"operator",
+    isdragabble:true,
+    name:"-",
+    value:"-"
+},
+{
+    id:8,
+    type:"operator",
+    isdragabble:true,
+    name:"*",
+    value:"*"
+},
+{
+    id:9,
+    type:"operator",
+    isdragabble:true,
+    name:"/",
+    value:"/"
+},
+{
+    id:10,
+    type:"comparator",
+    isdragabble:false,
+    name:"<",
+    value:"<"
+},
+{
+    id:11,
+    type:"comparator",
+    isdragabble:false,
+    name:">",
+    value:">"
+},
+{
+    id:12,
+    type:"rhs",
+    isdragabble:false,
+    name:"RHS Integer",
+    value:""
+}
+];
