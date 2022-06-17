@@ -44,6 +44,7 @@ function App() {
       return data;
     }
    });
+   
   //  console.log(box[0])
    setCanvasData(prevData=>{
    return [...prevData,box[0]]
@@ -119,18 +120,28 @@ function App() {
     <span className='space'></span>
     {
       rhsData.map(data=>{
-        return <div onClick={()=>createRhs(data.id)} className="rhs">{data.name}</div>
+        return <div key={data.id} onClick={()=>createRhs(data.id)} className="rhs">{data.name}</div>
       })
     }
     </section>
     <div id="myCanvas" onDrop={handleDrop} onDragOver={handleDragOver} className='canvas'>
     {
       canvasData && canvasData.map(data=>{
-        return <CanvaBox data={data} handleRemove={handleRemove}/>
+        return <CanvaBox key={data.id} data={data} handleRemove={handleRemove}/>
       })
     }
 </div>
 <button className='btn' onClick={handleSubmit}>Evaluate</button>
+<footer>
+  <ul>
+    <li>Alphabets are fetched from the NodeJS+Express+MongoDB backend</li>
+    <li>Numbers(Alphabets) and operators are draggable</li>
+    <li>&lt; &nbsp; and &nbsp; &gt; &nbsp; are clickable(non-draggable), pick the comparison sign using them</li>
+    <li>Clicking on the RHS integer, it prompts to choose an integer and adds it to the equation</li>
+    <li>Drag and drop functionality was implemented without any external library</li>
+    <li>Dragging an operand/operator to the center of any two elements adds it between those two elements</li>
+  </ul>
+</footer>
 
     </>
   );
